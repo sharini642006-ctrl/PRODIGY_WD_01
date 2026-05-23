@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel & Adventure</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    /* Navbar */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #333;
+      padding: 15px 0;
+      transition: background-color 0.3s ease;
+      z-index: 1000;
+    }
+
+    nav.scrolled {
+      background-color: #0066cc;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      margin: 0 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      transition: color 0.3s ease, font-weight 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: yellow;
+      font-weight: bold;
+    }
+
+    /* Sections */
+    section {
+      padding: 100px 20px;
+      min-height: 100vh;
+      text-align: center;
+    }
+
+    #home {
+      background: linear-gradient(to right, #f4f4f4, #e2e2ff);
+    }
+
+    #destinations {
+      background: linear-gradient(to right, #e2e2ff, #d4ffd4);
+    }
+
+    #adventures {
+      background: linear-gradient(to right, #d4ffd4, #ffe2e2);
+    }
+
+    #contact {
+      background: linear-gradient(to right, #ffe2e2, #f4f4f4);
+    }
+
+    h1, h2 {
+      margin-top: 0;
+    }
+
+    img {
+      max-width: 80%;
+      height: auto;
+      border-radius: 10px;
+      margin-top: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul li {
+      margin: 10px 0;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav id="navbar">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#destinations">Destinations</a></li>
+      <li><a href="#adventures">Adventures</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Sections -->
+  <section id="home">
+    <h1>Explore the World 🌍</h1>
+    <p>Travel opens your mind, broadens your horizons, and connects you with cultures across the globe. 
+       Whether you’re seeking relaxation or adrenaline, there’s a journey waiting for you.</p>
+    <img src="https://picsum.photos/800/400?travel" alt="Travel Image">
+  </section>
+
+  <section id="destinations">
+    <h2>Top Destinations ✈️</h2>
+    <p>Our curated list of destinations includes breathtaking landscapes and vibrant cities:</p>
+    <ul>
+      <li>🏖 Maldives – crystal clear waters and luxury resorts</li>
+      <li>🏔 Switzerland – snow‑capped Alps and scenic train rides</li>
+      <li>🌆 Tokyo – futuristic cityscapes and rich traditions</li>
+      <li>🌴 Bali – tropical paradise with cultural charm</li>
+    </ul>
+    <img src="https://picsum.photos/800/400?beach" alt="Beach Destination">
+  </section>
+
+  <section id="adventures">
+    <h2>Adventures 🚵</h2>
+    <p>Adventure travel is about pushing boundaries and creating unforgettable stories. 
+       Here are some experiences we recommend:</p>
+    <ul>
+      <li>🏔 Mountain Trekking – conquer peaks and enjoy panoramic views</li>
+      <li>🌊 Scuba Diving – explore coral reefs and marine life</li>
+      <li>🏛 Cultural Tours – immerse yourself in history and traditions</li>
+      <li>🚴 Cycling Trails – discover hidden gems at your own pace</li>
+    </ul>
+    <img src="https://picsum.photos/800/400?adventure" alt="Adventure Image">
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us 📩</h2>
+    <p>Ready to plan your next trip? Our travel experts can help you design personalized itineraries 
+       that match your interests and budget.</p>
+    <p>Email: travel@adventureworld.com | Phone: +91 98765 43210</p>
+    <img src="https://picsum.photos/800/400?city" alt="Contact Image">
+  </section>
+
+  <script>
+    // Scroll effect
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+  </script>
+</body>
+</html>
